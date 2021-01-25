@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="705.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetudiants.MenuController">
+   <children>
+      <Pane layoutX="13.0" layoutY="14.0" prefHeight="121.0" prefWidth="579.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom&amp;Prenom :">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="21.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profil :">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="224.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des Etudiants">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="439.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleDeconnexion" prefHeight="31.0" prefWidth="131.0" text="Déconnection" />
+         </children>
+      </Pane>
+      <Accordion layoutX="13.0" layoutY="163.0" prefHeight="174.0" prefWidth="181.0">
+        <panes>
+          <TitledPane animated="false" prefHeight="0.0" prefWidth="202.0" text="Classes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="38.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleLoadViewClasse" prefHeight="25.0" prefWidth="102.0" text="Liste Classe" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Etudiants">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="35.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleInscription" prefHeight="25.0" prefWidth="115.0" text="Inscrire Etudiant" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Professeurs">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="31.0" layoutY="14.0" mnemonicParsing="false" text="Attribuer Classe" />
+                        <Button layoutX="33.0" layoutY="49.0" mnemonicParsing="false" onAction="#handleModule" prefHeight="25.0" prefWidth="99.0" text="Modules" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <AnchorPane fx:id="AnchorContent" layoutX="197.0" layoutY="163.0" prefHeight="539.0" prefWidth="810.0" />
+   </children>
+</AnchorPane>
